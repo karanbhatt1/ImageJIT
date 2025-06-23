@@ -59,7 +59,7 @@ public class ImageProcessorGUI extends JFrame implements DslProcessor.ImageOpera
         topActionsPanel.add(createButton("Reset Image (GUI)", e -> resetImage()));
         contentPane.add(topActionsPanel, BorderLayout.NORTH);
 
-        imageDisplayLabel = new JLabel();
+        imageDisplayLabel = new JLabel(); // Re-initialize as it's used in initComponents and setupLayout
         imageDisplayLabel.setHorizontalAlignment(SwingConstants.CENTER);
         imageScrollPane = new JScrollPane(imageDisplayLabel);
         contentPane.add(imageScrollPane, BorderLayout.CENTER);
@@ -271,7 +271,6 @@ public class ImageProcessorGUI extends JFrame implements DslProcessor.ImageOpera
         }
         try {
             File outputFile = new File(filePath);
-            // Ensure format is valid for ImageIO.write
             if (!ImageIO.write(image, format, outputFile)) {
                 throw new IOException("No writer found for format: " + format + ". Or failed to write.");
             }
@@ -401,12 +400,8 @@ public class ImageProcessorGUI extends JFrame implements DslProcessor.ImageOpera
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             try {
-                // Use the handler's loadImageFromFile to ensure consistent loading logic
                 originalImage = loadImageFromFile(selectedFile.getAbsolutePath());
                 if (originalImage != null) {
-                    // When loading manually, we treat it as a new DSL variable for the GUI
-                    // You could put it in a specific 'gui_image' variable in dslProcessor's map
-                    // or handle it separately. For now, it's just the currentImage.
                     updateDisplayImage(originalImage);
                     statusLabel.setText("Image '" + selectedFile.getName() + "' loaded successfully via GUI.");
                 } else {
@@ -479,7 +474,6 @@ public class ImageProcessorGUI extends JFrame implements DslProcessor.ImageOpera
     private void executeDslCommand() {
         String script = dslCommandField.getText();
         dslProcessor.processScript(script);
-        // The display will be updated by the DslProcessor's handler calls
     }
 
     // Main method to run the GUI

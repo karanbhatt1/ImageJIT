@@ -6,6 +6,9 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +19,7 @@ public class DslProcessor {
         BufferedImage loadImageFromFile(String filePath);
         BufferedImage resizeImage(BufferedImage image, int width, int height);
         BufferedImage applyGrayscale(BufferedImage image);
-        BufferedImage applyInvertColors(BufferedImage image); // Renamed to avoid confusion with internal invert
+        BufferedImage applyInvertColors(BufferedImage image);
         BufferedImage applyRotation(BufferedImage image, double angleDegrees);
         BufferedImage applyFlip(BufferedImage image, String direction);
         void saveImageToFile(BufferedImage image, String filePath, String format);
@@ -67,17 +70,6 @@ public class DslProcessor {
 
             handler.showStatusMessage("DSL script executed successfully.");
 
-            // After script execution, update the main GUI display with the last modified/saved image
-            // This assumes the last 'save' or 'AS' operation's result is what user wants to see.
-            // You might need more sophisticated logic here depending on desired behavior.
-            if (!imageVariables.isEmpty()) {
-                // Try to display the last image produced if available
-                // Or you could make 'updateDisplayImage' a specific call in save/load/last AS.
-                // For now, if the map isn't empty, pick a visual representative
-                // A better approach: the GUI's currentImage is updated by operations handler
-            }
-
-
         } catch (IllegalArgumentException e) {
             handler.showErrorMessage("DSL Error: " + e.getMessage());
         } catch (Exception e) {
@@ -110,8 +102,8 @@ public class DslProcessor {
 
         @Override
         public void exitLoadStatement(ImagescriptParser.LoadStatementContext ctx) {
-            String filePath = stripQuotes(ctx.STRING().getText());
-            String varName = ctx.IDENTIFIER().getText();
+            String filePath = stripQuotes(ctx.filePath.getText());
+            String varName = ctx.varName.getText();
             try {
                 BufferedImage image = handler.loadImageFromFile(filePath);
                 if (image != null) {
@@ -130,8 +122,8 @@ public class DslProcessor {
         public void exitResizeStatement(ImagescriptParser.ResizeStatementContext ctx) {
             String inputVar = ctx.inputVar.getText();
             String outputVar = ctx.outputVar.getText();
-            int width = Integer.parseInt(ctx.width.getText());
-            int height = Integer.parseInt(ctx.height.getText());
+            int width = Integer.parseInt(ctx.width.getText()); // Now expecting an INT from grammar
+            int height = Integer.parseInt(ctx.height.getText()); // Now expecting an INT from grammar
 
             try {
                 BufferedImage inputImage = getMandatoryImage(inputVar);
@@ -164,7 +156,7 @@ public class DslProcessor {
         public void exitRotateStatement(ImagescriptParser.RotateStatementContext ctx) {
             String inputVar = ctx.inputVar.getText();
             String outputVar = ctx.outputVar.getText();
-            double angle = Double.parseDouble(ctx.angle.getText()); // Use double for angle
+            double angle = Double.parseDouble(ctx.angle.getText()); // Uses NUMBER which allows decimals
 
             try {
                 BufferedImage inputImage = getMandatoryImage(inputVar);
@@ -197,8 +189,8 @@ public class DslProcessor {
         @Override
         public void exitSaveStatement(ImagescriptParser.SaveStatementContext ctx) {
             String varName = ctx.varName.getText();
-            String filePath = stripQuotes(ctx.filePath.getText());
-            String formatName = stripQuotes(ctx.formatName.getText());
+            String filePath = stripQuotes(ctx.filePath.getText()); // Access using label
+            String formatName = stripQuotes(ctx.formatName.getText()); // Access using label
 
             try {
                 BufferedImage imageToSave = getMandatoryImage(varName);
