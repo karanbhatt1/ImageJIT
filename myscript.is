@@ -1,0 +1,12 @@
+LOAD "script_output_images/input.png" AS originalImage;
+RESIZE originalImage WIDTH 150 HEIGHT 100 AS resizedImage;
+GRAYSCALE resizedImage AS grayImage;
+SAVE grayImage TO "script_output_images/processed_gray.png" FORMAT "png";
+ROTATE originalImage ANGLE 45 AS rotatedImage;
+SAVE rotatedImage TO "script_output_images/processed_rotated.png" FORMAT "png";
+FLIP originalImage HORIZONTAL AS flippedHImage;
+SAVE flippedHImage TO "script_output_images/processed_flipped_h.png" FORMAT "png";
+FLIP originalImage VERTICAL AS flippedVImage;
+SAVE flippedVImage TO "script_output_images/processed_flipped_v.png" FORMAT "png";
+FLIP originalImage BOTH AS flippedBImage;
+SAVE flippedBImage TO "script_output_images/processed_flipped_b.png" FORMAT "png";

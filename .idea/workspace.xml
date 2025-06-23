@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="efd3063d-50f6-4dc4-9c0b-de1be4ef823a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antlr-4.13.1-complete.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myscript.is" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processed_IMG_20210202_094731.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_output_images/input.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/antlr/Imagescript.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imagecore/ImageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/Imagescript.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/Imagescript.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/ImagescriptBaseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/ImagescriptLexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/ImagescriptLexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/ImagescriptLexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/ImagescriptListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/parsingfiles/ImagescriptParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/imagecore/ImageUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptBaseListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptLexer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$FlipDirectionContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$FlipStatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$GrayscaleStatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$LoadStatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$ResizeStatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$RotateStatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$SaveStatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$ScriptContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser$StatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/parsingfiles/ImagescriptParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/MainApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2ymXwNCi9EMDs9BgDBX8zYfGqqA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/pbl/PBJImagewithjit-main/Imageprocessing/pom.xml",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\pbl\PBJImagewithjit-main\Imageprocessing\src\main\java\com\antlr" />
+      <recent name="E:\pbl\PBJImagewithjit-main\Imageprocessing\src\main\java\com\parsingfiles" />
+      <recent name="E:\pbl\PBJImagewithjit-main\Imageprocessing\src\main\java\antlr4\com\parsingfiles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efd3063d-50f6-4dc4-9c0b-de1be4ef823a" name="Changes" comment="" />
+      <created>1750440959934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750440959934</updated>
+    </task>
+    <servers />
+  </component>
+</project>
