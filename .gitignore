@@ -1,6 +1,16 @@
+#intellij Idea
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/jarRepositories.xml
+.idea/material_theme_project_new.xml
+.idea/misc.xml
+.idea/vcs.xml
+
+.idea/workspace.xml
 antlr-4.13.1-complete.jar
-.idea
 main.md
 myscript.is
 processed_IMG_20210202_094731.jpg
-E:\pbl\PBJImagewithjit-main\Imageprocessing\src\main\java\com\parsingfiles
+./src/main/java/com/parsingfiles
+
+target/
