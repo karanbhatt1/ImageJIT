@@ -15,16 +15,18 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <antlr4.version>4.13.1</antlr4.version>
-        <main.class>org.MainApp</main.class>
+        <main.class>org.ImageProcessorGUI</main.class>
     </properties>
 
     <dependencies>
+        <!-- ANTLR4 Runtime -->
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
             <version>${antlr4.version}</version>
         </dependency>
 
+        <!-- JUnit for testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -36,6 +38,7 @@
 
     <build>
         <plugins>
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -46,13 +49,14 @@
                 </configuration>
             </plugin>
 
+            <!-- ANTLR4 Maven Plugin -->
             <plugin>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-maven-plugin</artifactId>
                 <version>${antlr4.version}</version>
                 <configuration>
-                    <sourceDirectory>src/main/java/com/antlr</sourceDirectory>
-                    <outputDirectory>src/main/java/com/parsingfiles</outputDirectory>
+                    <sourceDirectory>${project.basedir}/src/main/java/com/antlr</sourceDirectory>
+                    <outputDirectory>${project.build.directory}/src/main/java/com/parsingfiles</outputDirectory>
                     <listener>true</listener>
                     <visitor>false</visitor>
                 </configuration>
@@ -65,6 +69,7 @@
                 </executions>
             </plugin>
 
+            <!-- Build Helper Maven Plugin (Crucial when generating sources to target/) -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
@@ -85,34 +90,31 @@
                 </executions>
             </plugin>
 
-
+            <!-- Maven Exec Plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version> <executions>
-                <execution>
-                    <goals>
-                        <goal>java</goal>
-                    </goals>
-                </execution>
-            </executions>
+                <version>3.1.0</version>
                 <configuration>
                     <mainClass>${main.class}</mainClass>
                 </configuration>
             </plugin>
 
+            <!-- Maven Clean Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.2.0</version>
             </plugin>
 
+            <!-- Maven Resources Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.3.1</version>
             </plugin>
 
+            <!-- Maven JAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
